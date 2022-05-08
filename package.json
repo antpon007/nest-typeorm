@@ -1,0 +1,47 @@
+{
+  "name": "prueba_backend",
+  "version": "0.0.1",
+  "description": "Este proyecto tiene como finalidad cumplir con prueba técnica: Banco de los Sueños - Back - NodeJs",
+  "author": "Antonio Luis Ponce Rondon",
+  "license": "",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "start:debug": "nodemon --config nodemon-debug.json",
+    "prestart:prod": "rimraf dist && npm run build",
+    "start:prod": "node dist/main.js",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.0.0",
+    "@nestjs/core": "^6.0.0",
+    "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/typeorm": "^6.1.0",
+    "@types/morgan": "^1.9.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.17.1",
+    "nest-morgan": "^2.0.0",
+    "reflect-metadata": "^0.1.12",
+    "rimraf": "^2.6.2",
+    "rxjs": "^6.3.3",
+    "typeorm": "^0.2.17",
+    "TypeScript": "npm:typescript@^3.9.10",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.18",
+    "@types/uuid": "^8.3.4",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "5.12.1",
+    "typescript": "^3.2.4"
+  }
+}
