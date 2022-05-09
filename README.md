@@ -2,10 +2,6 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://desarrolloweb.com/media/350/typeorm-nest.jpg" width="620" alt="Nest & TypeOrm" /></a>
 </p>
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
   
   <p align="center">This project is an implementation of the NestJs framework using the typeorm library, mysql database and applying some concepts of SOLID and hexagonal architecture.</p>
     <p align="center">
