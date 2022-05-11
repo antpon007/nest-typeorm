@@ -1,5 +1,5 @@
 import { Inject } from '@nestjs/common';
-import { hash } from 'src/modules/shared/domain/value-objects/crypto-string';
+import { hash } from 'src/modules/shared/infraestructure/crypto-string';
 import { IUserFindRepository } from '../../shared/domain/Iuser-find.repository';
 import { User } from '../../shared/domain/user';
 import { IUserRegisterRepository } from '../domain/Iuser-register.repository';
@@ -12,12 +12,7 @@ export class RegisterService {
 
     @Inject('USER_FIND_REPOSITORY')
     private readonly findRepository: IUserFindRepository,
-  ) {
-    console.log('Iniciando RegisterRepository', { registerRepository });
-    console.log('Iniciando FindRepository findByPersonalId', {
-      findByPersonalId: this.findRepository.findByPersonalId,
-    });
-  }
+  ) {}
   async handle(input: UserRegisterDTO): Promise<void> {
     try {
       input.password = await hash(input.password);
@@ -32,10 +27,6 @@ export class RegisterService {
   }
 
   private async existUser(user: User) {
-    console.log({
-      findRepository: this.findRepository,
-      definition: this.findRepository.toString(),
-    });
     const result = await this.findRepository.findByPersonalId(user.personalId);
     if (result) throw new Error('User already exists with this personal ID');
   }

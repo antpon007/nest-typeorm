@@ -1,0 +1,20 @@
+export enum PRODUCT_STATUS {
+  PENDING = 0,
+  APPROVED = 1,
+  ACTIVE = 2,
+  RESTRINGED = 3,
+  CANCELLED = 4,
+}
+
+export enum PRODUCT_REQUEST_STATUS {
+  PENDING = 0,
+  APPROVED = 1,
+  CANCELLED = 2,
+}
+
+export enum MOVEMENT_STATUS {
+  PENDING = 0,
+  APPROVED = 1,
+  CANCELLED = 2,
+  BLOCKED = 3,
+}

@@ -1,0 +1,6 @@
+export enum PRODUCT_TYPE {
+  SAVINGS = 0,
+  CREDIT_CARD = 1,
+  CREDIT_AGILE = 2,
+  LEASING = 3,
+}

@@ -1,0 +1,744 @@
+{
+	"info": {
+		"_postman_id": "e5ed1056-aff6-44ac-b598-6a30bd2535cc",
+		"name": "Bank Of Dreams",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"personalId\": \"114355124\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/user/register",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"personalId\": \"114355124\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/user/login",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Savings Account",
+					"item": [
+						{
+							"name": "create account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/saving",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"saving"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get accounts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/saving",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"saving"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get account by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/saving/:id",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"saving",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68dd8c86-d591-4748-ac93-2421109c5a95"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credit Card",
+					"item": [
+						{
+							"name": "create account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/credit/card",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"credit",
+										"card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get accounts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/credit/card",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"credit",
+										"card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get account by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/credit/card/:id",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"credit",
+										"card",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68dd8c86-d591-4748-ac93-2421109c5a95"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credit Easy",
+					"item": [
+						{
+							"name": "create account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/credit/easy",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"credit",
+										"easy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get accounts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/credit/easy",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"credit",
+										"easy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get account by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/credit/easy/:id",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"credit",
+										"easy",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68dd8c86-d591-4748-ac93-2421109c5a95"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Leasing",
+					"item": [
+						{
+							"name": "create account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/leasing",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"leasing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get accounts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/leasing",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"leasing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get account by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URI}}/product/leasing/:id",
+									"host": [
+										"{{URI}}"
+									],
+									"path": [
+										"product",
+										"leasing",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "024ddcf1-f88e-4976-aab0-59b5dba71b19"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Portfolio",
+					"item": [
+						{
+							"name": "Accounts",
+							"item": [
+								{
+									"name": "get accounts by user",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/product",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"product"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Request Product",
+							"item": [
+								{
+									"name": "create request",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\" : 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/product/request",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"product",
+												"request"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get requests by user",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/product/request",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"product",
+												"request"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get request by id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/product/request/:id",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"product",
+												"request",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "6a5e9d58-26a3-4f2c-a69b-2d36d46484bd"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Movements",
+							"item": [
+								{
+									"name": "create movement",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": 0,\r\n    \"productId\": \"18820dff-75ba-4d79-8ae2-ff6f5d30f8bc\",\r\n    \"entity\": \"Olimpica\",\r\n    \"amount\": 45000,\r\n    \"tax\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/movement",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"movement"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get movement by id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/movement/:id",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"movement",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "28cb454d-5fc9-4cda-8cac-418290fb50de"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get movements by user",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"startDate\": \"2022-05-10\",\r\n    \"endDate\": \"2022-05-12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/movement",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"movement"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get movements by product",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"startDate\": \"2022-05-11T00:35:47.000Z\",\r\n    \"endDate\": \"2022-05-12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URI}}/movement/producto/:id",
+											"host": [
+												"{{URI}}"
+											],
+											"path": [
+												"movement",
+												"producto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "18820dff-75ba-4d79-8ae2-ff6f5d30f8bc"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			],
+			"description": "**Notes:**\n\nPRODUCT_TYPE:\n\n*   SAVINGS = 0\n*   CREDIT_CARD = 1\n*   CREDIT_AGILE = 2\n*   LEASING = 3\n    \n\nPRODUCT_STATUS:\n\n*   PENDING = 0\n*   APPROVED = 1\n*   ACTIVE = 2\n*   RESTRINGED = 3\n*   CANCELLED = 4\n    \n\nPRODUCT_REQUEST_STATUS:\n\n*   PENDING = 0\n*   APPROVED = 1\n*   CANCELLED = 2\n    \n\nMOVEMENT_TYPE\n\n*   BUY = 0\n*   TRANSFER = 1\n*   AUTOMATIC_DEBIT = 2"
+		}
+	]
+}

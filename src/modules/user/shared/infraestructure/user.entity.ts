@@ -17,7 +17,7 @@ export class UserEntity implements Partial<UserEntityMap> {
   @Column({ name: 'personal_id', length: 50 })
   personalId: string;
 
-  @Column({ name: 'password', length: 100 })
+  @Column({ name: 'password', length: 2000 })
   password: string;
 
   @Column({ name: 'create_dt' })
