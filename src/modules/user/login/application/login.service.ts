@@ -1,4 +1,4 @@
-import { Inject } from '@nestjs/common';
+import { ForbiddenException, Inject } from '@nestjs/common';
 import { verify } from 'src/modules/shared/infraestructure/crypto-string';
 import { IUserFindRepository } from '../../shared/domain/Iuser-find.repository';
 import { User } from '../../shared/domain/user';
@@ -23,7 +23,7 @@ export class LoginService {
 
   private async existUser(user: User): Promise<UserType> {
     const result = await this.findRepository.findByPersonalId(user.personalId);
-    if (!result) throw new Error('Invalid User/Password');
+    if (!result) throw new ForbiddenException('Invalid User/Password');
     return result;
   }
 }

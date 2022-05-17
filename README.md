@@ -47,6 +47,35 @@ $ npm run start:prod
 
 ## Support
 
+## Using Docker-Compose
+
+https://www.docker.com/get-started/
+
+### Initializing a instance mysqldb
+
+For this occasion we will use a root user password in a txt file [db_password.txt](https://github.com/antpon007/nest-typeorm/tree/main), which will be used by docker when creating the database instance.
+
+```bash
+$ docker-compose up -d
+```
+
+### Restoring Database
+
+A volume is currently configured for mysql at location: [utils/storage-docker](https://github.com/antpon007/nest-typeorm/tree/main/utils/storage-docker). modify it if you think it is necessary
+
+- ./utils/storage-docker:/var/lib/mysql
+
+```bash
+
+# local volumen
+
+$ docker exec <NAME-CONTAINER> sh -c 'exec /var/lib/mysql -r -uroot -p"$MYSQL_ROOT_PASSWORD_FILE" database-dreambank' > ./utils/bd-scripts/bankofdreamsbd.sql
+
+# example
+
+$ docker exec nest-js-typeorm_db_1 sh -c 'exec /var/lib/mysql -r -uroot -p"$MYSQL_ROOT_PASSWORD_FILE" database-dreambank' > ./utils/bd-scripts/bankofdreamsbd.sql
+```
+
 ## Stay in touch
 
 - Author - [Antonio Luis Ponce Rondón](https://www.linkedin.com/in/antpon-dev/)

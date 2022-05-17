@@ -1,4 +1,4 @@
-import { Inject } from '@nestjs/common';
+import { ForbiddenException, Inject } from '@nestjs/common';
 import { hash } from 'src/modules/shared/infraestructure/crypto-string';
 import { IUserFindRepository } from '../../shared/domain/Iuser-find.repository';
 import { User } from '../../shared/domain/user';
@@ -28,6 +28,7 @@ export class RegisterService {
 
   private async existUser(user: User) {
     const result = await this.findRepository.findByPersonalId(user.personalId);
-    if (result) throw new Error('User already exists with this personal ID');
+    if (result)
+      throw new ForbiddenException('User already exists with this personal ID');
   }
 }
