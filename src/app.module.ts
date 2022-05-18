@@ -6,9 +6,16 @@ import { ProductsModule } from './modules/products/products.module';
 import { UserModule } from './modules/user/user.module';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { MorganModule, MorganInterceptor } from 'nest-morgan';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
-  imports: [DatabaseModule, ProductsModule, UserModule, MorganModule],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    DatabaseModule,
+    ProductsModule,
+    UserModule,
+    MorganModule,
+  ],
   controllers: [AppController],
   providers: [
     AppService,
@@ -18,4 +25,9 @@ import { MorganModule, MorganInterceptor } from 'nest-morgan';
     },
   ],
 })
-export class AppModule {}
+export class AppModule {
+  static port: number;
+  constructor(private readonly configService: ConfigService) {
+    AppModule.port = +this.configService.get('PORT');
+  }
+}

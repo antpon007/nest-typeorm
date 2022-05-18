@@ -19,6 +19,8 @@ export class ProductFindRepository implements IProductFindRepository {
     console.log(productId);
     const result: ProductType = await this.productRP.findOne({
       where: { userId, productId },
+      // relations: ['user'], en caso de usar relaciones
+      // skip: offset, take: limit -->  paginación
     });
     return result ? { ...result } : null;
   }
@@ -36,6 +38,7 @@ export class ProductFindRepository implements IProductFindRepository {
   ): Promise<ProductType[]> | null {
     const result: ProductType[] = await this.productRP.find({
       where: { userId, type },
+      // relations: ['user'], en caso de usar relaciones
     });
     return result;
   }

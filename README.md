@@ -61,11 +61,11 @@ $ docker-compose up -d
 
 ### Restoring Database
 
-A volume is currently configured for mysql at location: [utils/storage-docker](https://github.com/antpon007/nest-typeorm/tree/main/utils/storage-docker). modify it if you think it is necessary
+There is currently one volume configured in the docker-compose.yml file for mysql at location: [utils/storage-docker](https://github.com/antpon007/nest-typeorm/tree/main/utils/storage-docker). modify it if you think it is necessary
 
 - ./utils/storage-docker:/var/lib/mysql
 
-```bash
+<!-- ```bash
 
 # local volumen
 
@@ -74,7 +74,7 @@ $ docker exec <NAME-CONTAINER> sh -c 'exec /var/lib/mysql -r -uroot -p"$MYSQL_RO
 # example
 
 $ docker exec nest-js-typeorm_db_1 sh -c 'exec /var/lib/mysql -r -uroot -p"$MYSQL_ROOT_PASSWORD_FILE" database-dreambank' > ./utils/bd-scripts/bankofdreamsbd.sql
-```
+``` -->
 
 ## Stay in touch
 

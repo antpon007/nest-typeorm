@@ -15,6 +15,14 @@ export class ProductEntity implements Partial<ProductEntityMap> {
   @PrimaryColumn({ name: 'product_id', type: String, length: 50 })
   productId: string;
 
+  // @ManyToOne(
+  //   type => User,
+  //   user => user.id,
+  //   { cascade: true },
+  // )
+  // @JoinColumn({ name: 'user_id' })
+  // user: User;
+
   @Column({ name: 'user_id', length: 50 })
   userId: string;
 
